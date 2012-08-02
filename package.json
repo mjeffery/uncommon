@@ -1,0 +1,17 @@
+{
+  "name": "uncommon",
+  "version": "0.0.0",
+  "description": "uncommon is a build tool for creating a single browser compatible script from a CommonJs project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjeffery/uncommon.git"
+  },
+  "keywords": ["build", "commonjs"],
+  "author": "Michael Jeffery <michael.jeffery@gmail.com>",
+  "homepage": "https://github.com/mjeffery/uncommon",
+  "license": "MIT",
+  dependencies: {
+  	"uglify-js": ">=0.0.2" 
+  }
+}
