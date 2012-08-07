@@ -1,17 +1,21 @@
 {
   "name": "uncommon",
-  "version": "0.0.0",
-  "description": "uncommon is a build tool for creating a single browser compatible script from a CommonJs project",
+  "version": "0.0.1-dev",
+  "description": "uncommon is a build tool for compiling a single browser compatible script from a CommonJS project",
   "main": "index.js",
+  "dependencies": {
+  	"underscore": ">=1.3.3",
+  	"esprima": ">=0.9.9",
+  	"escodegen": ">=0.0.5",
+  	"optimist": ">=0.3.4"
+  },
+  "keywords": ["build", "commonjs", "modules", "amd", "browser"],
+  "author": "Michael Jeffery <michael.jeffery@gmail.com>",
+  "homepage": "https://github.com/mjeffery/uncommon",
   "repository": {
     "type": "git",
     "url": "https://github.com/mjeffery/uncommon.git"
   },
-  "keywords": ["build", "commonjs"],
-  "author": "Michael Jeffery <michael.jeffery@gmail.com>",
-  "homepage": "https://github.com/mjeffery/uncommon",
   "license": "MIT",
-  dependencies: {
-  	"uglify-js": ">=0.0.2" 
-  }
+  "preferGlobal": true
 }

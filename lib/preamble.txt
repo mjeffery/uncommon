@@ -1,0 +1,29 @@
+(function(root){
+	var __modules = {}, __defines = {};
+	function require(id) {
+		if(!__modules.hasOwnProperty(id)) {
+			
+			if(!__defines.hasOwnProperty(id))
+				throw new Error('The module "' + id + '" could not be found');
+			
+			var module = { exports: {} };
+			Object.defineProperty(module, 'id', { //TODO? polyfill defineProperty
+				writeable: false, 
+				configurable: false, 
+				enumerable: true, 
+				value: new String(id) 
+			});
+			
+			__defines[id].call(root, require, module);
+			__modules[id] = module.exports;	
+		}
+		
+		return __modules[id];
+	};
+	
+	require.define = function(path, def) {
+		if(__defines.hasOwnProperty(path))
+			throw new Error('Attempting to redefine module "'+ module + '"');
+			
+		__defines[path] = def;
+	}

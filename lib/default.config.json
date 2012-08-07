@@ -1,0 +1,7 @@
+{
+	"name": "uncommon",
+	"output": "uncommon.js",
+	"main": "index.js",
+	"dependencies": {},
+	"packaging": "global"
+}
