@@ -1,6 +1,6 @@
 (function(root){
 	var __modules = {}, __defines = {};
-	function require(id) {
+	function uncommon(id) {
 		if(!__modules.hasOwnProperty(id)) {
 			
 			if(!__defines.hasOwnProperty(id))
@@ -14,14 +14,14 @@
 				value: new String(id) 
 			});
 			
-			__defines[id].call(root, require, module);
+			__defines[id].call(root, uncommon, module);
 			__modules[id] = module.exports;	
 		}
 		
 		return __modules[id];
 	};
 	
-	require.define = function(path, def) {
+	uncommon.define = function(path, def) {
 		if(__defines.hasOwnProperty(path))
 			throw new Error('Attempting to redefine module "'+ module + '"');
 			
